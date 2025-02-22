@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARSHANTH | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP and ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Intro Animation -->
+    <div id="splash-screen">
+        <h1 class="h-letter">H</h1>
+    </div>
+    
+    <style>
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: #fff;
+            z-index: 9999;
+        }
+        .h-letter {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+    </style>
+    
+    
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-container">
+                <img src="Picsart_24-09-24_18-37-59-843.jpg" alt="HARSHANTH" class="profile-img" />
+                <h1>HARSHANTH</h1>
+                <p>ARTIFICAL INTELLIGENCE AND DATA SCIENCE 
+                    ENGINEER STUDENT
+                </p>
+            </div>
+        </header>
+
+        <!-- Personal details -->
+        <section class="section" id="personal">
+            <h2>Personal details</h2>
+            <p>
+                linkedin:
+                <a href="https://www.linkedin.com/in/harshanth-krishnan-
+                " target="_blank"></a>
+            </p>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate Full Stack Developer with expertise in React, Node.js, and modern web technologies. I love creating impactful solutions and delivering high-quality work.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+<section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <img src="html-logo.png" alt="HTML" class="skill-logo">
+            <img src="css-logo.png" alt="CSS" class="skill-logo">
+            <img src="js-logo.png" alt="JavaScript" class="skill-logo">
+            <img src="react-logo.png" alt="React" class="skill-logo">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="skill-card">
+            <img src="nodejs-logo.png" alt="Node.js" class="skill-logo">
+            <img src="express-logo.png" alt="Express" class="skill-logo">
+            <img src="mongodb-logo.png" alt="MongoDB" class="skill-logo">
+            <h3>Backend Development</h3>
+            <p>Node.js, Express, MongoDB</p>
+        </div>
+        <div class="skill-card">
+            <img src="figma-logo.png" alt="Figma" class="skill-logo">
+            <img src="adobe-xd-logo.png" alt="Adobe XD" class="skill-logo">
+            <h3>UI/UX Design</h3>
+            <p>Figma, Adobe XD, Prototyping</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .skills-grid {
+        display: flex;
+        gap: 20px;
+    }
+    .skill-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+    }
+    .skill-logo {
+        width: 40px;
+        height: auto;
+        margin: 5px;
+    }
+</style>
+
+
+        <!-- Certifications Section -->
+<section class="section" id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications-grid">
+        <div class="certification-card">
+            <img src="react-cert.jpg" alt="React Developer Certificate" class="cert-img" onclick="openModal('react-cert.jpg')">
+            <h3>React Developer</h3>
+            <p>Issued by: Codecademy</p>
+            <p>Date: Jan 2023</p>
+            <button class="view-btn" onclick="openModal('react-cert.jpg')">View</button>
+        </div>
+        <div class="certification-card">
+            <img src="nodejs-cert.jpg" alt="Node.js Specialist Certificate" class="cert-img" onclick="openModal('nodejs-cert.jpg')">
+            <h3>Node.js Specialist</h3>
+            <p>Issued by: Udemy</p>
+            <p>Date: Mar 2023</p>
+            <button class="view-btn" onclick="openModal('nodejs-cert.jpg')">View</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Full-Size Certificate View -->
+<div id="certModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullCertImg">
+</div>
+
+<!-- CSS -->
+<style>
+    .certifications-grid {
+        display: flex;
+        gap: 20px;
+    }
+    .certification-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+    }
+    .cert-img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+    }
+    .view-btn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    function openModal(imgSrc) {
+        document.getElementById("certModal").style.display = "flex";
+        document.getElementById("fullCertImg").src = imgSrc;
+    }
+    function closeModal() {
+        document.getElementById("certModal").style.display = "none";
+    }
+</script>
+
+
+        <!-- Projects Section -->
+<section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="project1.jpg" alt="Project 1" />
+            <div class="project-info">
+                <h3>E-Commerce Website</h3>
+                <p>A fully responsive e-commerce platform built with React and Node.js.</p>
+                <button class="view-btn" onclick="window.location.href='https://github.com/yourusername/ecommerce-project'">View on GitHub</button>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="project2.jpg" alt="Project 2" />
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A modern portfolio website showcasing my skills and projects.</p>
+                <button class="view-btn" onclick="window.location.href='https://github.com/yourusername/portfolio-website'">View on GitHub</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Contact Section -->
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" onsubmit="sendEmail(event)">
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Name" required />
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+            <textarea id="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <div id="form-message" class="form-message"></div>
+    </form>
+</section>
+<!-- Include EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+    (function() {
+        emailjs.init("XlFoEFbUUr2clNY0I"); // Replace with your EmailJS Public Key
+    })();
+
+    function sendEmail(event) {
+        event.preventDefault();
+        console.log("Form submission intercepted.");
+
+        const serviceID = "service_q3a9wju"; // Replace with your EmailJS Service ID
+        const templateID = "template_ui3tftu"; // Replace with your EmailJS Template ID
+
+        const templateParams = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+
+        console.log("Sending email with params:", templateParams);
+
+        emailjs.send(serviceID, templateID, templateParams)
+            .then(response => {
+                console.log("Email sent successfully!", response);
+                document.getElementById('form-message').textContent = "Message sent successfully!";
+                document.getElementById('form-message').style.color = "green";
+                document.querySelector(".contact-form").reset();
+            })
+            .catch(error => {
+                console.error("EmailJS Error:", error);
+                document.getElementById('form-message').textContent = "Failed to send message. Please try again!";
+                document.getElementById('form-message').style.color = "red";
+            });
+    }
+</script>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 HARSHANTH. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // GSAP ScrollTrigger Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate Header Section
+        gsap.from(".header", {
+            opacity: 0.1,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".header",
+                start: "top 50%",
+                end: "bottom 50%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate personal details
+        gsap.from("#personal", {
+            opacity: 0.1,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#personal",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate About Section
+        gsap.from("#about", {
+            opacity: 0.1,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate Skills Section
+        gsap.from(".skill-card", {
+            opacity: 0.1,
+            y: 50,
+            stagger: 0.1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#skills",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate Certifications Section
+        gsap.from(".certification-card", {
+            opacity: 0.1,
+            x: 50,
+            stagger: 0.1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#certifications",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate Projects Section
+        gsap.from(".project-card", {
+            opacity: 0.1,
+            y: 50,
+            stagger: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate Contact Section
+        gsap.from("#contact", {
+            opacity: 0.1,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#contact",
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Animate Footer Section
+        gsap.from("footer", {
+            opacity: 100,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "footer",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        // Framer Motion for Intro Animation
+        const splashScreen = document.getElementById("splash-screen");
+        const hLetter = document.querySelector(".h-letter");
+
+        // Fade out splash screen
+        setTimeout(() => {
+            gsap.to(splashScreen, {
+                opacity: 0,
+                duration: 1,
+                onComplete: () => {
+                    splashScreen.style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                },
+            });
+        }, 3000);
+
+        // Animate the "H" letter with Framer Motion
+        gsap.from(hLetter, {
+            scale: 0,
+            rotate: 360,
+            duration: 2,
+            ease: "bounce.out",
+        });
+    </script>
+</body>
+</html>
